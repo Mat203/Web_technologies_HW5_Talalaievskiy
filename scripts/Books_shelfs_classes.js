@@ -59,7 +59,7 @@ function addBook() {
     const newBook = new Book(title, authors, numberOfPages, isRead, isFavorite);
     shelf.addBook(newBook);
     displayBookshelf();
-};
+}
 
 function displayBookshelf() {
     bookshelfBody.innerHTML = '';
