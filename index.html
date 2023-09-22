@@ -1,10 +1,47 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>My HTML page</title>
-    <script src="scripts\function1.js"></script>
+
 </head>
+
 <body>
+    <div style="justify-content: center">
+        <form id="addBookForm">
+            <label for="title">Title:</label>
+            <input type="text" id="title" required><br>
+            <label for="authors">Authors:</label>
+            <input type="text" id="authors" required><br>
+            <label for="pages">Number of Pages:</label>
+            <input type="text" id="pages" required><br>
+            <label for="isRead">Is Read:</label>
+            <input type="checkbox" id="isRead"><br>
+            <label for="isFavorite">Is Favorite:</label>
+            <input type="checkbox" id="isFavorite"><br>
+            <button type="button" onclick="addBook()">Add Book</button>
+        </form>
+        <p>Total amount of books: <span id="totalBooks">0</span></p>
+        <button onclick="alertUnreadBooks()">alert number of Unread Books</button>
+        <button onclick="alertFavoriteBooks()">alert number of Favorite Books</button>
+    </div>
+    <table id="bookshelf">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Authors</th>
+                <th>Number of Pages</th>
+                <th>Is Read</th>
+                <th>Is Favorite</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="bookshelfBody">
+        </tbody>
+    </table>
+    <script src="scripts\function1.js"></script>
+    <script src="scripts\Books_shelfs_classes.js"></script>
 </body>
+
 </html>
